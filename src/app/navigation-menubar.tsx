@@ -13,7 +13,7 @@ export default function NavigationMenuBar() {
       <div className="flex size-9 flex-none md:flex-auto"></div>
       <div className="flex size-12 flex-grow flex-row-reverse gap-4 p-4 tracking-tighter md:tracking-normal text-sky-400">
         <Link href="/about">About</Link>
-        <Link href="/about">Profile</Link>
+        <Link href="/profile">Profile</Link>
         <Link href="/blog">Blog</Link>
       </div>
     </div>
