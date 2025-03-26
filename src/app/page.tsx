@@ -15,7 +15,7 @@ export default function HomePage() {
                 <img
                   src="/myspace-logo.svg"
                   alt="Icon"
-                  className="p-1 w-20 md:w-24"
+                  className="w-20 p-1 md:w-24"
                 />
                 <p className="p-1 text-4xl md:text-5xl">myspace</p>
               </div>
