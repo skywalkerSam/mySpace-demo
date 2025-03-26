@@ -4,6 +4,7 @@ import { type Metadata } from "next";
 import { Geist } from "next/font/google";
 import { ThemeProvider } from "~/components/theme-provider";
 import Footer from "~/components/ui/footer";
+import NavigationMenuBar from "./navigation-menubar";
 
 export const metadata: Metadata = {
   title: "MySpace Demo",
@@ -28,6 +29,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <NavigationMenuBar></NavigationMenuBar>
           {children}
           <Footer></Footer>
         </ThemeProvider>
