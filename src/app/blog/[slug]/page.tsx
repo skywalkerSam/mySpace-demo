@@ -1,12 +1,16 @@
 import { getPosts } from "~/server/queries";
-import type { Post } from "~/types/types";
+// import type { Post } from "~/types/types";
 // import BlogTitle from "../blog-title";
+
+export const dynamic = "force-dynamic";
 
 export default async function BlogPage({ slug }: { slug: string }) {
   const posts = await getPosts();
-  let post: Post | undefined;
+  // console.log(posts);
+  let post;
   if (posts) {
-    post = posts.find((post) => post.slug === slug);
+    post = posts.find((post) => posts?.slug === slug);
+    // console.log(post);
   }
 
   return (
