@@ -1,11 +1,9 @@
+import BlogTitle from "./blog-title"
+
 export default function Blog() {
   return (
     <div className="text-sky-400">
-      <div className="bg-gradient-to-b from-blue-300 via-blue-500 to-blue-300">
-        <h1 className="flex items-center justify-center text-4xl text-blue-950 hover:text-blue-600 md:text-5xl">
-          Blog
-        </h1>
-      </div>
+      <BlogTitle></BlogTitle>
       <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-blue-300 via-blue-600 to-blue-950">
         <div></div>
       </div>
