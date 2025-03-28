@@ -39,7 +39,7 @@ export default async function BlogPage({ params }: Props) {
   if (!post) {
     console.error("No post found with slug:", slug);
     return (
-      <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-blue-400 via-blue-600 to-blue-950">
+      <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-blue-300 via-blue-600 to-blue-950">
         <h1 className="text-2xl text-sky-400 md:text-3xl">Post not found.</h1>
       </div>
     );
@@ -47,14 +47,14 @@ export default async function BlogPage({ params }: Props) {
 
   return (
     <div className="text-sky-400">
-      <div className="bg-gradient-to-b from-blue-400 via-blue-500 to-blue-300">
-        <h1 className="flex items-center justify-center text-4xl text-blue-950 hover:text-blue-600 md:text-5xl">
+      <div className="bg-gradient-to-b from-blue-300 via-blue-500 to-blue-600">
+        <h1 className="flex items-center justify-center text-4xl text-gray-950 hover:text-blue-95 0 md:text-5xl p-10">
           {post?.title}
         </h1>
       </div>
 
-      <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-blue-400 via-blue-600 to-blue-950">
-        <div>
+      <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-blue-600 via-blue-900 to-blue-950">
+        <div className="flex flex-wrap p-10">
           <p className="text-xl md:text-2xl">{post?.content}</p>
         </div>
       </div>

@@ -11,10 +11,10 @@ export default function NavigationMenuBar() {
         </Link>
       </div>
       <div className="flex size-9 flex-none md:flex-auto"></div>
-      <div className="flex size-12 flex-grow flex-row-reverse gap-4 p-4 tracking-tighter md:tracking-normal text-sky-400">
-        <Link href="/about">About</Link>
-        <Link href="/profile">Profile</Link>
-        <Link href="/blog">Blog</Link>
+      <div className="flex size-12 flex-grow flex-row-reverse gap-4 p-4 tracking-tighter md:tracking-normal text-gray-950 text-lg">
+        <Link href="/about" className="hover:text-blue-950">About</Link>
+        <Link href="/profile" className="hover:text-blue-950">Profile</Link>
+        <Link href="/blog" className="hover:text-blue-950">Blog</Link>
       </div>
     </div>
   );

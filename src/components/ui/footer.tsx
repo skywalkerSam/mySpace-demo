@@ -6,7 +6,7 @@ import { ModeToggle } from "~/components/theme-toggle";
 export default function Footer() {
   return (
     <div className="bg-gradient-to-b from-blue-950 via-blue-600 to-blue-300">
-      <div className="flex flex-row items-center justify-center justify-items-end p-3 text-xs text-gray-600">
+      <div className="flex flex-row items-center justify-center justify-items-end p-3 text-xs text-gray-950">
         <div className="mr-2">
           <ModeToggle></ModeToggle>
         </div>
@@ -20,7 +20,7 @@ export default function Footer() {
               &copy; 12025,{" "}
               <a
                 href="https://github.com/skywalkerSam/"
-                className="hover:text-sky-400 hover:underline focus:text-sky-400"
+                className="hover:text-blue-900 hover:underline focus:text-blue-900"
                 target="_blank"
                 rel="noopener noreferrer"
               >

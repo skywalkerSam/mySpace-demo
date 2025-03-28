@@ -2,6 +2,7 @@ import "~/styles/globals.css";
 
 import { type Metadata } from "next";
 import { Geist } from "next/font/google";
+import { Ubuntu } from "next/font/google";
 import { ThemeProvider } from "~/components/theme-provider";
 import Footer from "~/components/ui/footer";
 import NavigationMenuBar from "./navigation-menubar";
@@ -15,6 +16,12 @@ export const metadata: Metadata = {
 const geist = Geist({
   subsets: ["latin"],
   variable: "--font-geist-sans",
+});
+
+const ubuntu = Ubuntu({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-ubuntu",
 });
 
 export default function RootLayout({

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-blue-400 via-blue-600 to-blue-950">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-blue-300 via-blue-600 to-blue-950">
       <div>
         <div>
           <Link
