@@ -2,7 +2,7 @@ import { getPosts } from "~/server/queries";
 import type { Post } from "~/types/types";
 
 export const dynamic = "force-dynamic";
-export const revalidate = 420;
+// export const revalidate = 420;
 
 interface Props {
   params: { slug: string };
