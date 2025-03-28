@@ -8,13 +8,14 @@ interface Props {
   params: { slug: string };
 }
 export default async function BlogPage({ params }: Props) {
+  const { slug } =  await params;
   const posts: Post[] = await getPosts();
   // console.log(posts);
-  const post = posts.find((post) => post?.slug === params.slug);
+  const post = posts.find((post) => post?.slug === slug);
   // const post = posts.filter((post) => post.slug === slug)?.[0];
   // console.log(post);
   if (!post) {
-    console.error("No post found with slug:", params.slug);
+    console.error("No post found with slug:", slug);
   }
 
   return (
