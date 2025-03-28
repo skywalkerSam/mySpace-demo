@@ -3,8 +3,8 @@ import type { Post } from "~/types/types";
 
 export async function getPosts() {
   try {
-    // const response: Response = await fetch(process.env.NEXT_PUBLIC_API_URL!, {
-    const response: Response = await fetch("http://localhost:3000/api/posts", {
+    // const response: Response = await fetch("http://localhost:3000/api/posts", {
+    const response: Response = await fetch(process.env.NEXT_PUBLIC_API_URL!, {
       cache: "no-cache",
     });
     if (!response.ok) {
