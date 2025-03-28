@@ -38,6 +38,11 @@ export default async function BlogPage({ params }: Props) {
   // console.log(post);
   if (!post) {
     console.error("No post found with slug:", slug);
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-blue-300 via-blue-600 to-blue-950">
+        <h1 className="text-2xl text-sky-400 md:text-3xl">Post not found.</h1>
+      </div>
+    );
   }
 
   return (
