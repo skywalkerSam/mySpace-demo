@@ -48,7 +48,7 @@ export default async function BlogPage({ params }: Props) {
   return (
     <div className="text-sky-400">
       <div className="bg-gradient-to-b from-blue-300 via-blue-500 to-blue-600">
-        <h1 className="flex items-center justify-center text-4xl text-gray-950 hover:text-blue-95 0 md:text-5xl p-10">
+        <h1 className="flex items-center justify-center text-4xl text-gray-950 hover:text-blue-950 md:text-5xl p-10">
           {post?.title}
         </h1>
       </div>

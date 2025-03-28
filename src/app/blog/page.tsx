@@ -28,10 +28,16 @@ export default async function Blog() {
                         ? `${post.content.substring(0, 100)}...`
                         : post.content}
                     </p>
-                    {/* <p className="text-blue-200">{post.content}</p> */}
                     <p className="mt-2 inline-block text-sky-400 hover:underline">
-                      Read more →
+                      <span className="sr-only">
+                        Read more about {post.title}
+                      </span>
+                      <span aria-hidden="true">Read more →</span>
                     </p>
+                    {/* <p className="mt-2 inline-block text-sky-400 hover:underline">
+                      Read more →
+                    </p> */}
+                    {/* <p className="text-blue-200">{post.content}</p> */}
                   </li>
                 </Link>
               ))}
