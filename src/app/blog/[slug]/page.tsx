@@ -1,25 +1,33 @@
 import { getPosts } from "~/server/queries";
-// import type { Post } from "~/types/types";
-// import BlogTitle from "../blog-title";
+import type { Post } from "~/types/types";
 
 export const dynamic = "force-dynamic";
+export const revalidate = 420;
 
-export default async function BlogPage({ slug }: { slug: string }) {
-  const posts = await getPosts();
+interface Props {
+  params: { slug: string };
+}
+export default async function BlogPage({ params }: Props) {
+  const posts: Post[] = await getPosts();
   // console.log(posts);
-  let post;
-  if (posts) {
-    post = posts.find((post) => posts?.slug === slug);
-    // console.log(post);
+  const post = posts.find((post) => post?.slug === params.slug);
+  // const post = posts.filter((post) => post.slug === slug)?.[0];
+  // console.log(post);
+  if (!post) {
+    console.error("No post found with slug:", params.slug);
   }
 
   return (
     <div className="text-sky-400">
-      {/* <BlogTitle></BlogTitle> */}
-      <h1>{post?.title}</h1>
+      <div className="bg-gradient-to-b from-blue-300 via-blue-500 to-blue-300">
+        <h1 className="flex items-center justify-center text-4xl text-blue-950 hover:text-blue-600 md:text-5xl">
+          {post?.title}
+        </h1>
+      </div>
+
       <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-blue-300 via-blue-600 to-blue-950">
         <div>
-          <p>{post?.content}</p>
+          <p className="text-xl md:text-2xl">{post?.content}</p>
         </div>
       </div>
     </div>
