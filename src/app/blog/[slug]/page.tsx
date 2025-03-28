@@ -28,9 +28,10 @@ interface Props {
  * @param {{ params: { slug: string } }} props
  * @returns {JSX.Element}\
  * @see https://nextjs.org/docs/app/api-reference/functions/next-response
+ * @see https://nextjs.org/docs/messages/sync-dynamic-apis
  */
 export default async function BlogPage({ params }: Props) {
-  const { slug } = params;
+  const { slug } = params;  // do no await params here, it breaks prod!!
   const posts: Post[] | undefined = await getPosts();
   // console.log(posts);
   const post = posts?.find((post) => post?.slug === slug);
