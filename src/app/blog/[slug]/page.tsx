@@ -1,19 +1,34 @@
 import { getPosts } from "~/server/queries";
 import type { Post } from "~/types/types";
 
-export const dynamic = "force-dynamic";
-// export const revalidate = 420;
+// export const dynamic = "force-dynamic";
+export const revalidate = 420;
+
+/**
+ * Generates static parameters for blog post pages.
+ * It fetches all posts and maps their slugs to be used as parameters for static generation.
+ * This allows Next.js to pre-render pages for each blog post based on its slug.
+ *
+ * @returns {Promise<{ slug: string }[]>} An array of objects containing slugs of each post.
+ */
+export async function generateStaticParams() {
+  const posts: Post[] | undefined = await getPosts();
+
+  return posts?.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
 interface Props {
   params: { slug: string };
 }
-  /**
-   * Page for a single blog post. Given a slug as a URL param, it will fetch the corresponding post
-   * from the database and display its title and content.
-   * @param {{ params: { slug: string } }} props
-   * @returns {JSX.Element}\
-   * @see https://nextjs.org/docs/app/api-reference/functions/next-response
-   */
+/**
+ * Page for a single blog post. Given a slug as a URL param, it will fetch the corresponding post
+ * from the database and display its title and content.
+ * @param {{ params: { slug: string } }} props
+ * @returns {JSX.Element}\
+ * @see https://nextjs.org/docs/app/api-reference/functions/next-response
+ */
 export default async function BlogPage({ params }: Props) {
   const { slug } = await params;
   const posts: Post[] | undefined = await getPosts();
