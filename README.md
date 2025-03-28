@@ -1,4 +1,4 @@
-# MySpace Demo
+# MySpace Demo w/ [Fireship.io](https://fireship.io/courses/nextjs/project-setup/)
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
 
