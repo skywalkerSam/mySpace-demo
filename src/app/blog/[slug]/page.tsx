@@ -7,11 +7,18 @@ export const dynamic = "force-dynamic";
 interface Props {
   params: { slug: string };
 }
+  /**
+   * Page for a single blog post. Given a slug as a URL param, it will fetch the corresponding post
+   * from the database and display its title and content.
+   * @param {{ params: { slug: string } }} props
+   * @returns {JSX.Element}\
+   * @see https://nextjs.org/docs/app/api-reference/functions/next-response
+   */
 export default async function BlogPage({ params }: Props) {
-  const { slug } =  await params;
-  const posts: Post[] = await getPosts();
+  const { slug } = await params;
+  const posts: Post[] | undefined = await getPosts();
   // console.log(posts);
-  const post = posts.find((post) => post?.slug === slug);
+  const post = posts?.find((post) => post?.slug === slug);
   // const post = posts.filter((post) => post.slug === slug)?.[0];
   // console.log(post);
   if (!post) {
