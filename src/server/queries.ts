@@ -7,7 +7,7 @@ const apiUrl =
 /**
  * Fetches posts from the API endpoint.
  *
- * @returns A list of posts, each with { id, slug, title, content }.
+ * @returns A list of posts, each with { title, content, slug } as defined in the Post interface.
  *          An empty array if the fetch fails.
  */
 export async function getPosts() {

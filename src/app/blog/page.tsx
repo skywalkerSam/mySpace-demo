@@ -20,10 +20,10 @@ export default async function Blog() {
               {posts.map((post) => (
                 <Link href={`/blog/${post.slug}`} key={post.slug}>
                   <li className="rounded-md bg-white/10 p-4 backdrop-blur">
-                    <h2 className="mb-2 text-xl font-bold text-gray-900">
+                    <h2 className="mb-2 text-xl font-bold text-gray-950 hover:text-blue-950">
                       {post.title}
                     </h2>
-                    <p className="text-sky-200">
+                    <p className="text-sky-300 text-lg">
                       {post.content.length > 100
                         ? `${post.content.substring(0, 100)}...`
                         : post.content}

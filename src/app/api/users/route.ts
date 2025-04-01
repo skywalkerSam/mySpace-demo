@@ -26,8 +26,24 @@ export async function GET() {
  */
 export async function POST(request: Request) {
   // Parse the request body
-  const body: unknown = await request.json();
-  if (typeof body === "object" && body !== null && "name" in body) {
+  let body: unknown;
+  try {
+    body = await request.json();
+  } catch (error) {
+    console.error(error);
+    return new Response("Invalid JSON in request body", {
+      status: 400,
+      headers: { "Content-Type": "text/plain" },
+    });
+  }
+  // const body: unknown = await request.json();
+  if (
+    typeof body === "object" &&
+    body !== null &&
+    "name" in body &&
+    typeof body.name === "string" &&
+    body.name.trim() !== ""
+  ) {
     const { name } = body;
     // e.g. Insert new user into your DB
     const newUser = { id: Date.now(), name };
