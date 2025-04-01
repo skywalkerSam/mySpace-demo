@@ -7,7 +7,11 @@ export default function Profile() {
         </h1>
       </div>
       <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-blue-300 via-blue-600 to-blue-950">
-        <div></div>
+        <div className="rounded-lg bg-black/20 p-8 backdrop-blur-sm">
+          +{" "}
+          {/* TODO: Add profile content such as user information, settings, etc. */}
+          + <p className="text-xl">Profile content coming soon...</p>+{" "}
+        </div>
       </div>
     </div>
   );
