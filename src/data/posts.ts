@@ -97,4 +97,9 @@ export const posts = [
     slug: "journey",
     content: "The only journey is the one within...",
   },
+  {
+    title: "Driving 101s",
+    slug: "driving",
+    content: "Know and feel your car. Play crushing cans. It's fun. 🎉 Adjust thy \"Mirrors\" properly, and mind thy blind spots o' yours, and other's blind spots, too. Mind the day/night modes for rear view mirrors. Use 9-3/4-8 hand positions only (Airbags can cause injuries during accidents due to high-pressure airbag deployment). Always let the others know what you're about to do. Always. Mind the vehicles around you, i.e, never turn the wheels beforehand or accidently otherwise. Use yourself to judge the car's position on the road; leg to the middle. Use nearby objects/cars to judge the width of the gap you're tryna pass; NOT the car's width. Use reference markers on narrow roads but drive extremely slow asf🐌. Mind the illusion of low speed on free highways. Remember to dry your brakes after driving through water (apply slow brakes for quick water evaporation). Use headlights/music to initialize current flow before starting thy engines during winters. Always use the \"hand breaks\" except in extreme winters to avoid unnecessary movements and breaks.🥶Always drive slow in the rain, winter, and night. Use sunglasses for sunny days, for they can cause numbness throughout your body. Mind the \" environment\" & \"adapt\". Learn to drive in bad weather. Learn defensive driving. Regularly test the systems \"not in use\", like AC, windshields n' stuff. Learning for life... Ya live, ya learn, ya grow. Practice is the key to improvement. And most of 'em all; find your style, be comfortable, and always drive safe.)",
+  },
 ];
